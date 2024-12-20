@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Customer reviews for THE HUNGRY SCHOLAR, a top-rated restaurant offering Italian cuisine.">
+    <meta name="keywords" content="restaurant reviews, customer feedback, best italian restaurant, THE HUNGRY SCHOLAR, italian food reviews">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Customer Reviews | THE HUNGRY SCHOLAR</title>
+    <link rel="stylesheet" href="styles1.css">
+    <style>
+        /* Retro Style for Review Page */
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 0;
+            background-color: #fdf6e3;
+            color: #4d4d4d;
+            line-height: 1.6;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .reviews-section h2,
+        .form-section h2 {
+            font-family: 'Verdana', Geneva, sans-serif;
+            font-size: 1.8rem;
+            color: #d1452f;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .review-card {
+            background-color: #fff8e1;
+            border: 2px solid #d1452f;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .reviewer-info {
+            font-weight: bold;
+            color: #e77f67;
+        }
+
+        .review-text {
+            font-style: italic;
+        }
+
+        .stars {
+            color: #ffcc00;
+            margin-top: 5px;
+        }
+
+        form {
+            background-color: #fff8e1;
+            padding: 20px;
+            border: 2px solid #e77f67;
+            border-radius: 10px;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        form label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        form input,
+        form textarea,
+        form select {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            background-color: #e77f67;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        form button:hover {
+            background-color: #d1452f;
+        }
+
+        footer {
+            background-color: #d1452f;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">THE HUNGRY SCHOLAR</div> 
+        <nav>
+            <ul>
+                <li><a href="HOME.html">Home</a></li>
+                <li><a href="MENU.html">Menu</a></li>
+                <li><a href="appointment.html">Reservations</a></li>
+                <li><a href="review.html" class="active">Review us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section class="reviews-section">
+            <h2>What Our Customers Are Saying</h2>
+            <div id="reviews-container">
+                <!-- Dynamic Reviews Will Appear Here -->
+            </div>
+        </section>
+
+        <section class="form-section">
+            <h2>Leave a Review</h2>
+            <form id="review-form">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+                <label for="review">Your Review</label>
+                <textarea id="review" name="review" placeholder="Write your review here..." required></textarea>
+
+                <label for="rating">Rating</label>
+                <select id="rating" name="rating" required>
+                    <option value="5">⭐⭐⭐⭐⭐</option>
+                    <option value="4">⭐⭐⭐⭐</option>
+                    <option value="3">⭐⭐⭐</option>
+                    <option value="2">⭐⭐</option>
+                    <option value="1">⭐</option>
+                </select>
+
+                <button type="submit" class="btn-submit">Submit Review</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 THE HUNGRY SCHOLAR. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const form = document.getElementById("review-form");
+            const reviewsContainer = document.getElementById("reviews-container");
+
+            function loadReviews() {
+                const reviews = JSON.parse(localStorage.getItem("reviews")) || [];
+                reviewsContainer.innerHTML = "";
+                reviews.forEach(review => addReviewToDOM(review));
+            }
+
+            function addReviewToDOM(review) {
+                const reviewCard = document.createElement("div");
+                reviewCard.classList.add("review-card");
+                reviewCard.innerHTML = `
+                    <div class="reviewer-info">
+                        <strong>${review.name}</strong> <span class="review-date">– ${review.date}</span>
+                    </div>
+                    <div class="stars">${"⭐".repeat(review.rating)}</div>
+                    <h3>${review.title}</h3>
+                    <p class="review-text">${review.text}</p>
+                `;
+                reviewsContainer.appendChild(reviewCard);
+            }
+
+            form.addEventListener("submit", function(event) {
+                event.preventDefault();
+
+                const name = document.getElementById("name").value;
+                const text = document.getElementById("review").value;
+                const rating = parseInt(document.getElementById("rating").value);
+                const date = new Date().toLocaleDateString();
+                const title = "New Review";
+
+                const newReview = { name, text, rating, date, title };
+
+                const reviews = JSON.parse(localStorage.getItem("reviews")) || [];
+                reviews.push(newReview);
+                localStorage.setItem("reviews", JSON.stringify(reviews));
+
+                addReviewToDOM(newReview);
+                form.reset();
+            });
+
+            loadReviews();
+        });
+    </script>
+</body>
+</html>

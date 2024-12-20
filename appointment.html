@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Table</title>
+    <link rel="stylesheet" href="styles5.css">
+</head>
+<style>
+    /* Retro Style for Booking Page */
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #fdf6e3;
+    color: #4d4d4d;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.booking-container {
+    background-color: #fff8e1;
+    border: 2px solid #d1452f;
+    border-radius: 10px;
+    padding: 30px 20px;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+.booking-container h1 {
+    font-size: 2rem;
+    color: #d1452f;
+    margin-bottom: 10px;
+}
+
+.booking-container p {
+    font-size: 1rem;
+    color: #4d4d4d;
+    margin-bottom: 20px;
+}
+
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.booking-form label {
+    font-size: 1rem;
+    color: #d1452f;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.booking-form input {
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #d1452f;
+    border-radius: 5px;
+    background-color: #fef9f3;
+    font-size: 1rem;
+    color: #4d4d4d;
+}
+
+.booking-form input:focus {
+    outline: none;
+    border-color: #ffd700;
+    background-color: #fffbe6;
+}
+
+.booking-form a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #d1452f;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.booking-form a:hover {
+    background-color: #ffd700;
+    color: #d1452f;
+    transition: 0.3s ease;
+}
+
+</style>
+<body>
+    <div class="booking-container">
+        <h1>Book Your Table</h1>
+        <p>Reserve a table at our restaurant in just a few steps!</p>
+        <form class="booking-form">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required>
+
+            <label for="guests">Number of Guests:</label>
+            <input type="number" id="guests" name="guests" min="1" max="20" placeholder="Enter the number of guests" required>
+
+            <a href="htmlpage6.html">SUBMIT</a>
+        </form>
+    </div>
+</body>
+</html>

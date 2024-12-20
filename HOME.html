@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE HUNGRY SCHOLAR</title>
+    <link rel="stylesheet" href="styles1.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #hero {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .image {
+            width: 100%;
+            height: 100%; /* Maintain aspect ratio */
+            filter: blur(8px); /* Apply blur effect */
+            position: absolute; /* Positioning to cover the section */
+            top: 0;
+            left: 0;
+            z-index: 1; /* Ensure it's behind the content */
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2; /* Ensure content is above the blurred image */
+            color: white; /* Change text color for better visibility */
+            text-align: center; /* Center align text */
+            padding: 20px; /* Add padding for better spacing */
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff5722; /* Button color */
+            color: white; /* Text color for button */
+            text-decoration: none;
+            border-radius: 5px; /* Rounded corners */
+        }
+
+        .cta-button:hover {
+            background-color: #e64a19; /* Darker shade on hover */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">THE HUNGRY SCHOLAR</div> 
+        <nav>
+            <ul>
+                <li><a href="HOME.html">Home</a></li>
+                <li><a href="MENU.html">Menu</a></li>
+                <li><a href="appointment.html">Reservations</a></li>
+                <li><a href="review.html">Review us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <img src="main.jpg" class="image" alt="">
+        <div class="hero-content">
+            <h1 style="background-color: #a6ff005f; border-radius: 10px; color: rgb(36, 64, 47);">Experience authentic Indian cuisine at   <br>  <i><b>THE HUNGRY SCHOLAR.</b></i></h1>
+            <p style="background-color: #c7f7055f; border-radius: 3px; color: black;">Enjoy handcrafted Biryani, Bati chokha, and more in the heart of Ghaziabad. Book your table today!</p>
+            <a href="MENU.html" class="cta-button">Explore Our Menu</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Welcome to THE HUNGRY SCHOLAR, where passion meets flavor. We take pride in offering handcrafted dishes made with the finest ingredients, ensuring every bite is an experience to remember.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 THE HUNGRY SCHOLAR. All rights reserved.</p>
+    </footer>
+</body>
+</html>

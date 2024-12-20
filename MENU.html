@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | THE HUNGRY SCHOLAR</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<style>
+    /* Retro Style for Menu Page */
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #fdf6e3;
+    color: #4d4d4d;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #d1452f;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    color: #ffd700;
+    text-decoration: underline;
+}
+
+#menu-header {
+    text-align: center;
+    background-color: #fff8e1;
+    padding: 30px 15px;
+    border-bottom: 2px solid #d1452f;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+#menu-header h1 {
+    font-size: 2.5rem;
+    color: #d1452f;
+}
+
+#menu-header p {
+    font-size: 1.2rem;
+    color: #4d4d4d;
+}
+
+.menu-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+.menu-category {
+    margin-bottom: 30px;
+    border: 2px solid #d1452f;
+    background-color: #fff8e1;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.menu-category h2 {
+    font-size: 1.8rem;
+    color: #d1452f;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #d1452f;
+    font-size: 1rem;
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+}
+
+.menu-item span {
+    font-size: 1.1rem;
+}
+
+.menu-item .price {
+    font-weight: bold;
+    color: #e77f67;
+}
+
+footer {
+    background-color: #d1452f;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+</style>
+<body>
+    <header>
+        <div class="logo">THE HUNGRY SCHOLAR</div>
+       
+        <nav>
+            <ul>
+                <li><a href="HOME.html">Home</a></li>
+                <li><a href="MENU.html">Menu</a></li>
+                <li><a href="appointment.html">Reservations</a></li>
+                <li><a href="review.html">Review us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="menu-header">
+            <h1>Our Menu</h1>
+            <p>Indulge in our thoughtfully crafted dishes, prepared with the freshest ingredients and a touch of culinary artistry.</p>
+        </section>
+
+        <div class="menu-container">
+            <!-- Starters Section -->
+            <div class="menu-category">
+                <h2>Starters</h2>
+        
+                <div class="menu-item">
+                    <span>Galouti Kebab</span>
+                    <span class="price">₹250</span>
+                </div>
+                <div class="menu-item">
+                    <span>Shami Kebab</span>
+                    <span class="price">₹200</span>
+                </div>
+                <div class="menu-item">
+                    <span>Aloo Tikki</span>
+                    <span class="price">₹120</span>
+                </div>
+                <div class="menu-item">
+                    <span>Samosa</span>
+                    <span class="price">₹60</span>
+                </div>
+            </div>
+        
+            <!-- Main Course Section -->
+            <div class="menu-category">
+                <h2>Main Course</h2>
+        
+                <div class="menu-item">
+                    <span>Awadhi Biryani (paneer)</span>
+                    <span class="price">₹250</span>
+                </div>
+                <div class="menu-item">
+                    <span>Paneer Tikka</span>
+                    <span class="price">₹280</span>
+                </div>
+                <div class="menu-item">
+                    <span>Baingan Ka Bharta</span>
+                    <span class="price">₹220</span>
+                </div>
+                <div class="menu-item">
+                    <span>Dal Tadka</span>
+                    <span class="price">₹150</span>
+                </div>
+                <div class="menu-item">
+                    <span>Gobi Musallam</span>
+                    <span class="price">₹300</span>
+                </div>
+                <div class="menu-item">
+                    <span>Paneer Chilli (special)</span>
+                    <span class="price">₹300</span>
+                </div>
+                <div class="menu-item">
+                    <span>chilli potato</span>
+                    <span class="price">₹150</span>
+                </div>
+                <div class="menu-item">
+                    <span>Bati Chokha (special) with Desi Ghee</span>
+                    <span class="price">₹250</span>
+                </div>
+                <div class="menu-item">
+                    <span>Bati Chokha </span>
+                    <span class="price">₹200</span>
+                </div>
+            </div>
+        
+            <!-- Breads Section -->
+            <div class="menu-category">
+                <h2>Breads</h2>
+        
+                <div class="menu-item">
+                    <span>Butter Naan</span>
+                    <span class="price">₹50</span>
+                </div>
+                <div class="menu-item">
+                    <span>Garlic Naan</span>
+                    <span class="price">₹70</span>
+                </div>
+                <div class="menu-item">
+                    <span>Paratha</span>
+                    <span class="price">₹60</span>
+                </div>
+                <div class="menu-item">
+                    <span>Makki Di Roti</span>
+                    <span class="price">₹80</span>
+                </div>
+            </div>
+        
+            <!-- Desserts Section -->
+            <div class="menu-category">
+                <h2>Desserts</h2>
+        
+                <div class="menu-item">
+                    <span>Gulab Jamun</span>
+                    <span class="price">₹100</span>
+                </div>
+                <div class="menu-item">
+                    <span>Kheer</span>
+                    <span class="price">₹120</span>
+                </div>
+                <div class="menu-item">
+                    <span>Zarda</span>
+                    <span class="price">₹150</span>
+                </div>
+            </div>
+        
+            <!-- Beverages Section -->
+            <div class="menu-category">
+                <h2>Beverages</h2>
+        
+                <div class="menu-item">
+                    <span>Masala Chai</span>
+                    <span class="price">₹50</span>
+                </div>
+                <div class="menu-item">
+                    <span>Rooh Afza</span>
+                    <span class="price">₹80</span>
+                </div>
+                <div class="menu-item">
+                    <span>Saffron Lassi</span>
+                    <span class="price">₹120</span>
+                </div>
+                <div class="menu-item">
+                    <span>Aam Panna</span>
+                    <span class="price">₹60</span>
+                </div>
+            </div>
+        </div>
+
+    <footer>
+        <p>&copy; 2024 ThE HUNGRY SCHOLAR. All rights reserved.</p>
+    </footer>
+</body>
+</html>
